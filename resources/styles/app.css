@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Roboto:wght@400;500;700&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+body {
+  font-family: "News Cycle", sans-serif;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #b7b7ae;
+}
+.btn-pry {
+  @apply rounded-[4px] border-[1px] border-aesyc-background bg-gradient-to-r from-primary-0 to-primary-100 px-6 text-center font-sans text-[0.90rem] font-bold uppercase leading-9 text-bg1 md:text-base md:leading-10;
+}
+
+.btn-sec {
+  @apply rounded-[4px]  border-[1px] px-6 text-center font-sans text-base font-bold uppercase leading-9 text-primary-50 md:leading-10;
+}
+
+.blog-card {
+  @apply flex flex-col gap-4 p-0;
+}
+/* page navigation */
+.pagenavi {
+  @apply mx-auto flex  items-center space-x-4 px-0 pt-8 pb-0 xl:space-x-[400px];
+}
+.pagenavi a {
+  padding: 5px 6px 4px 6px;
+  margin: 3px;
+  text-decoration: none;
+  color: #666;
+  background-color: inherit;
+}
+.pagenavi a:hover {
+  color: #444;
+  background-color: #dee600;
+}
+.pagenavi span.pages {
+  padding: 5px 6px 4px 6px;
+  margin: 3px;
+  color: #000000;
+  font-weight: bold;
+  /* border: 1px solid #777; */
+  background-color: inherit;
+}
+.pagenavi span.current {
+  padding: 5px 6px 4px 6px;
+  margin: 3px;
+  font-weight: bold;
+  color: #dee600;
+}
+.pagenavi span.expand {
+  padding: 5px 6px 4px 6px;
+  margin: 3px;
+  color: #444;
+  background-color: inherit;
+}
+.pagenavi .first,
+.pagenavi .last {
+  border: 1px solid #aaa;
+}
+
+.post-categories a {
+  @apply text-center text-base font-bold leading-4 text-primary-0;
+}
+
+.updated {
+  @apply text-center text-sm font-normal leading-4 text-txSec;
+}
+
+ul.post-categories {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.post-categories li {
+  margin: 0;
+  padding: 0;
+}
+ul.post-categories a {
+  margin: 0;
+  color: #dee600;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.prose p {
+  font-size: 20px;
+  color: #dbdbd7;
+  font-weight: 400;
+  line-height: 32px;
+}
+/* featured image */
+/* .img-box::after {
+  content: "";
+  display: block;
+  background: #262622;
+  right: -50px;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 50;
+  position: absolute;
+  transform: skewX(-15deg) translateX(-493px);
+  border: 1px solid red;
+} */
+.card-container::after {
+  content: "";
+  display: block;
+  background: #181816;
+  right: -50px;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 50;
+  position: absolute;
+  transform: skewX(-15deg);
+}
+/* @media (min-width: 640px) {
+  .img-box::after {
+    transform: skewX(-15deg) translateX(-396px);
+  }
+} */
+
+/* featured image single post page */
+.img-box-single::after {
+  content: "";
+  display: block;
+  background: #262622;
+  right: -449px;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 50;
+  position: absolute;
+  transform: skewX(-15deg) translateX(-396px);
+  border: 1px solid red;
+}
+
+.hero-pattern {
+  background: radial-gradient(
+    39.57% 61.86% at 66.11% 58%,
+    #41413a 0%,
+    #262622 63.48%,
+    #181816 85.09%,
+    #0d0d0c 99.87%
+  );
+
+  .social-pattern {
+    background: linear-gradient(180deg, rgba(24, 24, 22, 0) 0%, #181816 50%);
+  }
+  .pt-140 {
+    padding-top: 140px;
+  }
+}
+/* Tabs */
+.nav-tabs .nav-link {
+  @apply text-lg font-normal leading-8 text-txSec;
+}
+.nav-tabs .nav-link.active {
+  @apply border-b-primary-50 text-primary-50;
+}
+/* carousel */
+.carousel-indicators [data-bs-target] {
+  @apply h-3 w-3  bg-primary-50;
+  border-radius: 100%;
+}
+/* blur effect to stack of choice section of homepage*/
+.stackOfChoice {
+  @apply absolute h-[400px] w-[400px] bg-[rgba(249,255,76,0.2)] blur-[250px];
+}
+
+/* blur effect to last section before footer of homepage */
+.lastSection {
+  @apply absolute h-[400px] w-[400px] bg-[#41413a] blur-[250px];
+}
+/* * {
+  outline: solid 2px red;
+} */
